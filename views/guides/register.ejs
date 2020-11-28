@@ -1,0 +1,33 @@
+<% layout('/layouts/boilerplate')%> 
+<div class="container d-flex justify-content-center align-items-center " >
+  <div class="row">
+      <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+          <div class="card shadow">
+              <img src="https://images.unsplash.com/photo-1504542982118-59308b40fe0c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjF8fHRyYXZlbCUyMGd1aWRlfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60
+                  alt=" class="card-img-top" />
+              <div class="card-body" style="background-color: #835858;">
+                  <h5 class="card-title">Register</h5>
+                  <form action="/register" method="POST"  >
+                      <div class="mb-3">
+                          <label class="form-label" for="username">Guidename</label>
+                          <input class="form-control" type="text" id="username" name="username" required autofocus>
+                          
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="email">Email</label>
+                          <input class="form-control" type="email" id="email" name="email" required>
+                         
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="password">Password</label>
+                          <input class="form-control" type="password" id="password" name="password" required>
+                         
+                      </div>
+                      <button class="btn btn-primary btn-block">Register</button>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

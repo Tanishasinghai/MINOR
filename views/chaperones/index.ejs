@@ -1,0 +1,27 @@
+<% layout('/layouts/boilerplate')%>
+
+        <h1>Explore Chaperones</h1>
+            <% for(let chaperone of chaperones){ %>
+                <div class="card mb-3" >
+                    <div class="row">
+                       
+                        <div class='col-md-8'>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= chaperone.firstName %></h5>
+                                <h5 class="card-text"><%= chaperone.lastName %></h5>
+                                
+                                <p class="card-text"><%= chaperone.description %></p>
+                            <p class="card-text">phone: <%= chaperone.phone %></p>
+                            <p class="card-text">fee: <%= chaperone.price %></p>
+                            
+                            <p class="card-text">
+                                <small class="text-muted"><%= chaperone.location %></small>
+                            </p>
+                            <a class='btn btn-primary' href='/chaperones/<%= chaperone._id %>'>View <%= chaperone.firstName  %></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+               

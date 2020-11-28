@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate')%>
+
+
+<div class="row">
+    <div class="col-6">
+        
+       
+        <div class="card mb-3">
+          
+            <div class="card-body">
+                <h5 class="card-title"><%= chaperone.firstName  %></h5>
+                <h5 class="card-title"><%= chaperone.lastName  %></h5>
+                
+                <p class="card-text"><%= chaperone.description %></p>
+                <p class="card-text"><%= chaperone.phone %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-muted"><%= chaperone.location%></li>
+ 
+                <li class="list-group-item">$<%= chaperone.price%>/night</li>
+            </ul>
+            <div class="card-body">
+                <a class="card-link btn btn-info" href="/chaperones/<%=chaperone._id%>/edit">Edit</a>
+                <form class="d-inline" action="/chaperones/<%=chaperone._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>
+
+    </div>
+
+    
+</div>
